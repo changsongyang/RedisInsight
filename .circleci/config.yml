@@ -513,7 +513,7 @@ jobs:
           command: |
             sudo apt-get update -y && sudo apt-get install -y rpm flatpak flatpak-builder
 
-            flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+            flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
             flatpak install flathub --no-deps --arch x86_64 --assumeyes \
             runtime/org.freedesktop.Sdk/x86_64/20.08 \
