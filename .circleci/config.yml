@@ -511,7 +511,7 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            sudo apt-get update -y && sudo apt-get install -y rpm flatpak flatpak-builder
+            sudo apt-get update -y && sudo apt-get install -y rpm flatpak flatpak-builder certtool
 
             flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
