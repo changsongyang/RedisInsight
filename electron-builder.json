@@ -83,7 +83,7 @@
     }
   },
   "flatpak": {
-    "runtimeVersion": "22.08",
+    "runtimeVersion": "20.08",
     "modules": [
       {
         "name": "libsecret",
