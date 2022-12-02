@@ -519,6 +519,8 @@ jobs:
             runtime/org.freedesktop.Sdk/x86_64/20.08 \
             runtime/org.freedesktop.Platform/x86_64/20.08 \
             org.electronjs.Electron2.BaseApp/x86_64/20.08
+            
+            certtool --infile=test.cert --verify --load-ca-certificate="pkcs11:model=p11-kit-trust;manufacturer=PKCS%2311%20Kit;serial=1;token=System%20Trust"
 
             yarn --cwd redisinsight/api/ install
             yarn install
