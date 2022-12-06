@@ -169,6 +169,24 @@ const DatabasesListWrapper = ({
 
   const columnsFull: EuiTableFieldDataColumnType<Instance>[] = [
     {
+      field: 'new',
+      className: styles.columnNew,
+      name: '',
+      width: '14px',
+      dataType: 'boolean',
+      'data-test-subj': 'database-status',
+      render: (newStatus: boolean, { id }: Instance) =>
+        newStatus && (
+          <EuiToolTip
+            content="New"
+            position="top"
+            anchorClassName={styles.newStatusAnchor}
+          >
+            <div className={styles.newStatus} data-testid={`database-status-${id}`} />
+          </EuiToolTip>
+        )
+    },
+    {
       field: 'name',
       className: 'column_name',
       name: 'Database Alias',

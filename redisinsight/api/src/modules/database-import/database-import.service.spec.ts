@@ -155,6 +155,16 @@ describe('DatabaseImportService', () => {
         name: `${mockDatabase.host}:${mockDatabase.port}`,
       });
     });
+    it('should create standalone with a "new" flag is true', async () => {
+      await service['createDatabase']({
+        ...mockDatabase,
+      });
+
+      expect(databaseRepository.create).toHaveBeenCalledWith({
+        ...pick(mockDatabase, ['host', 'port', 'name', 'connectionType', 'new']),
+        // new: true,
+      });
+    });
     it('should create cluster database', async () => {
       await service['createDatabase']({
         ...mockDatabase,

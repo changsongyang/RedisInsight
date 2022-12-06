@@ -27,6 +27,7 @@ export const mockDatabase = Object.assign(new Database(), {
   host: '127.0.100.1',
   port: 6379,
   connectionType: ConnectionType.STANDALONE,
+  new: false,
 });
 
 export const mockDatabaseEntity = Object.assign(new DatabaseEntity(), {
